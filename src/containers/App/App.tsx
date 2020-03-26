@@ -10,7 +10,7 @@ import Routes from '../../components/Routes/Routes';
 
 const App = () => {
 
-	const dummy = Array.from(Array(50).keys());
+	const dummy = Array.from(Array(60).keys());
 
 	return (
 		<div>
@@ -27,7 +27,10 @@ const App = () => {
 					</Scrollspy>
 					<Routes />
 					<ul>
-						{dummy.map((k) => (<li>{k}</li>))}
+						{  dummy.map((k) => {
+							return <li key={k}>{k}</li>
+						}) 
+						}
 					</ul>
 				</Router>
 			</StylesProvider>
